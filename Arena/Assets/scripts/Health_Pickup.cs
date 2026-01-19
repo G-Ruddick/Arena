@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 public class ItemBehavior : MonoBehaviour
-{
-    void Health_Pickup(Collision collision)
+{    
+    void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Player")
+        if(collision.gameObject.name == "Player")
         {
             Destroy(this.transform.gameObject);
-            Debug.Log("Item collected!");
+            UnityEngine.Debug.Log("Item collected!");
         }
     }
-}
+} 
