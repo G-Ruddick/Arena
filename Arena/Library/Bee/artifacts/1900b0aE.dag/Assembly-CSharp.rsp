@@ -405,6 +405,7 @@
 "Assets/scripts/Health_Pickup.cs"
 "Assets/scripts/invisible_pickup.cs"
 "Assets/scripts/player_movement.cs"
+"Assets/scripts/Shield_pickup.cs"
 -langversion:9.0
 /deterministic
 /optimize+
