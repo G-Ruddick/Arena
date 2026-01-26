@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/Glen Ruddick/Desktop/Arena/Arena/Packages/manifest.json
+    m_FilePath: C:/Users/ruddickg/Documents/GitHub/Arena/Arena/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639039663700554705
-    m_Hash: 1907927753
+      ticks: 639046224946544526
+    m_Hash: 827622745
   m_LockFileStatus:
-    m_FilePath: C:/Users/Glen Ruddick/Desktop/Arena/Arena/Packages/packages-lock.json
+    m_FilePath: C:/Users/ruddickg/Documents/GitHub/Arena/Arena/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639039663705132227
-    m_Hash: 1556631890
+      ticks: 639046224946544526
+    m_Hash: 4103317803
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/Glen Ruddick/Desktop/Arena/Arena/Packages
+m_ProjectPath: C:/Users/ruddickg/Documents/GitHub/Arena/Arena/Packages
 m_EditorVersion: 6000.3.3f1 (ef04196de0d6)
 m_ResolvedPackages:
 - packageId: com.unity.multiplayer.center@1.0.1
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.1
   source: 2
-  resolvedPath: C:\Users\Glen Ruddick\Desktop\Arena\Arena\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a
+  resolvedPath: C:\Users\ruddickg\Documents\GitHub\Arena\Arena\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
