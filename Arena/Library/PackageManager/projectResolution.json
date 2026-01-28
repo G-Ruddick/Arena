@@ -1,21 +1,31 @@
 {
   "context": {
-    "projectPath": "C:/Users/ruddickg/Documents/GitHub/Arena/Arena/Packages",
+    "projectPath": "C:/Users/Glen Ruddick/Desktop/Arena/Arena/Packages",
     "unityVersion": "6000.3.3f1"
   },
   "inputs": [
-    "C:\\Users\\ruddickg\\Documents\\GitHub\\Arena\\Arena\\Packages\\manifest.json",
-    "C:\\Users\\ruddickg\\Documents\\GitHub\\Arena\\Arena\\Packages\\packages-lock.json",
+    "C:\\Users\\Glen Ruddick\\Desktop\\Arena\\Arena\\Packages\\manifest.json",
+    "C:\\Users\\Glen Ruddick\\Desktop\\Arena\\Arena\\Packages\\packages-lock.json",
     "C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.3f1\\Editor\\Data\\Resources\\PackageManager\\BuiltInPackages\\BuiltInPackagesCombined.sha1"
   ],
   "outputs": {
     "com.unity.multiplayer.center@1.0.1": {
       "name": "com.unity.multiplayer.center",
       "displayName": "Multiplayer Center",
-      "resolvedPath": "C:\\Users\\ruddickg\\Documents\\GitHub\\Arena\\Arena\\Library\\PackageCache\\com.unity.multiplayer.center@f01f4ba8d00a",
+      "resolvedPath": "C:\\Users\\Glen Ruddick\\Desktop\\Arena\\Arena\\Library\\PackageCache\\com.unity.multiplayer.center@f01f4ba8d00a",
       "fingerprint": "f01f4ba8d00afa4e957bddf0fcd1612a564401ff",
       "editorCompatibility": "6000.0.0a1",
       "version": "1.0.1",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.ugui@2.0.0": {
+      "name": "com.unity.ugui",
+      "displayName": "Unity UI",
+      "resolvedPath": "C:\\Users\\Glen Ruddick\\Desktop\\Arena\\Arena\\Library\\PackageCache\\com.unity.ugui@8873725e650d",
+      "fingerprint": "8873725e650d08e38ff0036c986491dc2aff70dc",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "2.0.0",
       "source": "builtin",
       "testable": false
     },

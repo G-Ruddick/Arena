@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/ruddickg/Documents/GitHub/Arena/Arena/Packages/manifest.json
+    m_FilePath: C:/Users/Glen Ruddick/Desktop/Arena/Arena/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639046224946544526
-    m_Hash: 827622745
+      ticks: 639051763538627376
+    m_Hash: 2518922495
   m_LockFileStatus:
-    m_FilePath: C:/Users/ruddickg/Documents/GitHub/Arena/Arena/Packages/packages-lock.json
+    m_FilePath: C:/Users/Glen Ruddick/Desktop/Arena/Arena/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639046224946544526
-    m_Hash: 4103317803
+      ticks: 639051763538657623
+    m_Hash: 2676066620
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/ruddickg/Documents/GitHub/Arena/Arena/Packages
+m_ProjectPath: C:/Users/Glen Ruddick/Desktop/Arena/Arena/Packages
 m_EditorVersion: 6000.3.3f1 (ef04196de0d6)
 m_ResolvedPackages:
 - packageId: com.unity.multiplayer.center@1.0.1
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.1
   source: 2
-  resolvedPath: C:\Users\ruddickg\Documents\GitHub\Arena\Arena\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a
+  resolvedPath: C:\Users\Glen Ruddick\Desktop\Arena\Arena\Library\PackageCache\com.unity.multiplayer.center@f01f4ba8d00a
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -123,6 +123,113 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.1
     minimumUnityVersion: 6000.0
+  compliance:
+    status: 0
+    violation:
+      scopePatternExpression: 
+      message: 
+      readMoreLink: 
+- packageId: com.unity.ugui@2.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 2.0.0
+  source: 2
+  resolvedPath: C:\Users\Glen Ruddick\Desktop\Arena\Arena\Library\PackageCache\com.unity.ugui@8873725e650d
+  assetPath: Packages/com.unity.ugui
+  name: com.unity.ugui
+  displayName: Unity UI
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "Unity UI is a set of tools for developing user interfaces for games
+    and applications. It is a GameObject-based UI system that uses Components and
+    the Game View to arrange, position, and style user interfaces. \u200B You cannot
+    use Unity UI to create or change user interfaces in the Unity Editor."
+  errors: []
+  versions:
+    all:
+    - 2.0.0
+    compatible:
+    - 2.0.0
+    recommended: 2.0.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords:
+  - UI
+  - ugui
+  - Unity UI
+  - Canvas
+  - TextMeshPro
+  - TextMesh Pro
+  - Text
+  - TMP
+  - SDF
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+    compliance:
+      status: 0
+      violations: []
+  hideInEditor: 1
+  entitlements:
+    licensingModel: 0
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 2.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+    isDiscoverable: 1
+  isDeprecated: 0
+  deprecationMessage: 
+  git:
+    hash: 
+    revision: 
+  upmReserved: 
+  signature:
+    status: 0
+    reason: 
+    attestation:
+      format: 
+      publishingChannel: 
+      entitlementKeys: []
+      ownerOrgName: 
+      ownerOrgId: 
+      publisherName: 
+    errorCode: 
+  assetStore:
+    productId: 
+  fingerprint: 8873725e650d08e38ff0036c986491dc2aff70dc
+  editorCompatibility:
+    compatibilityLevel: 0
+    minimumPackageVersion: 2.0.0
+    minimumUnityVersion: 2019.2
   compliance:
     status: 0
     violation:

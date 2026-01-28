@@ -1,46 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class PlayerBehavior : MonoBehaviour
 {
-    public float MoveSpeed = 10f, RotateSpeed = 75f, JumpVelocity = 10f;
-    public float DistanceToGround = 0.1f;
-    private float _vInput, _hInput;
-    private bool _isJumping;
+    public float MoveSpeed = 10f;
+    public float RotateSpeed = 100f;
+    public float JumpVelocity = 10f;
+    public bool isJumping;
+    public float _vInput;
+    public float _hInput;
+    private bool jumpInput;
+    private bool isGrounded;
     private Rigidbody _rb;
-    public LayerMask GroundLayer;
     private SphereCollider _col;
+    public LayerMask GroundLayer;
+
+    public GameObject Bullet;
+    public float BulletSpeed = 100f;
+    private bool isShooting;
     
     void Start()
     {
+        Physics.gravity = new Vector3(0, -20f, 0);
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<SphereCollider>();
     }
     
     void Update()
     {
-        _vInput = Input.GetAxis("Vertical") * MoveSpeed;
-        _hInput = Input.GetAxis("Horizontal") * RotateSpeed;
-        
-        this.transform.Translate(Vector3.forward * _vInput * Time.deltaTime);
-        this.transform.Rotate(Vector3.up * _hInput * Time.deltaTime);
+        _vInput = Input.GetAxis("Vertical");
+        _hInput = Input.GetAxis("Horizontal");
+        jumpInput = Input.GetKey(KeyCode.Space);
 
-        _isJumping |= Input.GetKeyDown(KeyCode.J);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            isShooting = true;
+        }
     }
 
     void FixedUpdate()
     {
-        Vector3 rotation = Vector3.up * _hInput;  
-        Quaternion angleRot = Quaternion.Euler(rotation * Time.fixedDeltaTime);
-        
-        _rb.MovePosition(this.transform.position + this.transform.forward * _vInput * Time.fixedDeltaTime);
-        _rb.MoveRotation(_rb.rotation * angleRot);
+        transform.Translate(Vector3.forward * _vInput * MoveSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up * _hInput * RotateSpeed * Time.deltaTime);
 
-        if (_isJumping)
+        Vector3 groundCheckPos = transform.position + Vector3.down * (_col.radius - 0.05f);
+        isGrounded = Physics.CheckSphere(groundCheckPos, 0.1f, GroundLayer);
+
+        // Jump
+        if (jumpInput && isGrounded)
         {
             _rb.AddForce(Vector3.up * JumpVelocity, ForceMode.Impulse);
         }
-        _isJumping = false;
 
+        // Shooting
+        if (isShooting)
+        {
+            Vector3 spawnPos = transform.position + transform.forward * 1f;
+            GameObject newBullet = Instantiate(Bullet, spawnPos, transform.rotation);
+            Rigidbody bulletRB = newBullet.GetComponent<Rigidbody>();
+
+            bulletRB.linearVelocity = transform.forward * BulletSpeed;
+        }
+
+        isShooting = false;
     }
 }

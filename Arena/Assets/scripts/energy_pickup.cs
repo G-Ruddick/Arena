@@ -1,9 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
+
 public class enemy_pickup : MonoBehaviour
 {    
+    public GameBehavior GameManager;
+
+    void Start()
+    {
+        GameManager = GameObject.Find("Game Manager").GetComponent<GameBehavior>();
+    }
+
     public PlayerBehavior playerMovement;
     void OnCollisionEnter(Collision collision)
     {
@@ -14,7 +21,9 @@ public class enemy_pickup : MonoBehaviour
             if (playerMovement != null)
             {
                 Destroy(gameObject);
-                UnityEngine.Debug.Log("Item collected!");
+                Debug.Log("Item collected!");
+
+                GameManager.Items += 1;
 
                 playerMovement.MoveSpeed *= 1.2f;
             }
