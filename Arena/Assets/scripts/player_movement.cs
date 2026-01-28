@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerBehavior : MonoBehaviour
 {
     public float MoveSpeed = 10f;
+    public float originalSpeed;
     public float RotateSpeed = 100f;
     public float JumpVelocity = 10f;
     public bool isJumping;
@@ -19,12 +20,15 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject Bullet;
     public float BulletSpeed = 100f;
     private bool isShooting;
+
+    public bool speedBoost;
     
     void Start()
     {
         Physics.gravity = new Vector3(0, -20f, 0);
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<SphereCollider>();
+        originalSpeed = MoveSpeed;
     }
     
     void Update()
@@ -36,6 +40,12 @@ public class PlayerBehavior : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             isShooting = true;
+        }
+
+        if (speedBoost)
+        {
+            StartCoroutine(SpeedDecrease());
+            speedBoost = false;
         }
     }
 
@@ -64,5 +74,22 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         isShooting = false;
+        Debug.Log(MoveSpeed);
     }
+
+    IEnumerator SpeedDecrease()
+    {        
+        yield return new WaitForSeconds(3f);
+
+        while (MoveSpeed > originalSpeed)
+        {
+            yield return new WaitForSeconds(.05f);
+            MoveSpeed -= 0.3f;
+
+        }
+        if (MoveSpeed < originalSpeed)
+        {
+            MoveSpeed = originalSpeed;
+        }
+    }    
 }

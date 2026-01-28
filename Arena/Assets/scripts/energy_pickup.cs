@@ -21,11 +21,9 @@ public class enemy_pickup : MonoBehaviour
             if (playerMovement != null)
             {
                 Destroy(gameObject);
-                Debug.Log("Item collected!");
-
                 GameManager.Items += 1;
-
-                playerMovement.MoveSpeed *= 1.2f;
+                playerMovement.MoveSpeed *= 3f;
+                playerMovement.speedBoost = true;
             }
         }
     }
