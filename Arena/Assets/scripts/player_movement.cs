@@ -74,7 +74,6 @@ public class PlayerBehavior : MonoBehaviour
         }
 
         isShooting = false;
-        Debug.Log(MoveSpeed);
     }
 
     IEnumerator SpeedDecrease()

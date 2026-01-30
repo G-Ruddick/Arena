@@ -12,6 +12,7 @@ public class enemy_pickup : MonoBehaviour
     }
 
     public PlayerBehavior playerMovement;
+    
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))

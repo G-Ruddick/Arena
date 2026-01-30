@@ -9,9 +9,17 @@ public class GameBehavior : MonoBehaviour
 {
     private int itemsCollected = 0;
     public int maxItems = 4;
+
+    private int playerHP = 10;
+    public void AddHP(int newHP)
+    {
+        HP += newHP;
+    }
+
     public TMP_Text HealthText;
     public TMP_Text ItemText;
     public TMP_Text ProgressText;
+    
     public Button WinButton;
 
     void Start()
@@ -43,7 +51,6 @@ public class GameBehavior : MonoBehaviour
         }
     }
 
-    private int playerHP = 10;
     public int HP
     {
         get{return playerHP;}

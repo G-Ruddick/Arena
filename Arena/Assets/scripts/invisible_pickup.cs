@@ -16,8 +16,6 @@ public class invisible_pickup : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             Destroy(this.transform.gameObject);
-            Debug.Log("invisiblility collected!");
-
             GameManager.Items += 1;
         }
     }
